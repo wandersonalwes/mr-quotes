@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import { Pressable, StyleSheet, Text } from "react-native";
-import { getRandomQuoteByCategory } from "@wandersonalwes/quotes";
+import { getRandomQuoteByCategory } from "@quotes/data";
+import { Button } from "@quotes/react-native";
 
 export default function App() {
   const [quote, setQuote] = useState("");
@@ -18,6 +19,11 @@ export default function App() {
   return (
     <Pressable style={styles.container} onPress={handleRandomQuote}>
       <Text style={styles.text}>{quote}</Text>
+      <Button
+        onPress={handleRandomQuote}
+        title="Nova frase"
+        style={{ marginTop: 20 }}
+      />
       <StatusBar style="auto" />
     </Pressable>
   );

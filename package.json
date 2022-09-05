@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "wandersonalwes",
+  "name": "quotes",
   "version": "0.0.1",
   "workspaces": [
     "apps/*",
